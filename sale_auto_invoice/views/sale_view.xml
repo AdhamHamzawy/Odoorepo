@@ -1,0 +1,16 @@
+<odoo>
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.client</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='tax_country_id']" position="after">
+                <field name="payment_journal" />
+                <field name="sale_journal_id" />
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>
